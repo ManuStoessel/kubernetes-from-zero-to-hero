@@ -1,0 +1,8 @@
+resources:
+- ./base
+namePrefix: training-
+namespace: my-app
+commonLabels:
+  environment: training
+patchesStrategicMerge:
+  - patch.yaml

@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: my-job
+spec:
+  completions: 10
+  parallelism: 5
+  template:
+    spec:
+      containers:
+        - name: busybox
+          image: busybox:1.34.1
+          command: ["sleep"]
+          args: ["10"]
+      restartPolicy: Never

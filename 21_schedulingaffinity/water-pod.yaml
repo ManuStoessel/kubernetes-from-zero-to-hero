@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: water
+  labels:
+    app: water
+spec:
+  containers:
+    - name: water
+      image: nginx:1.21
+      resources:
+        limits:
+          cpu: 25m
+        requests:
+          cpu: 25m

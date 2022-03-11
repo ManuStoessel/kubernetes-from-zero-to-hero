@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fire
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: fire
+  template:
+    metadata:
+      labels:
+        app: fire
+    spec:
+      containers:
+        - name: fire
+          image: nginx:1.21
+          resources:
+            limits:
+              cpu: 25m
+            requests:
+              cpu: 25m
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: app
+                    operator: In
+                    values:
+                      - water
+              topologyKey: "kubernetes.io/hostname"

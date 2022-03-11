@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: blue
+  labels:
+    app: blue
+spec:
+  containers:
+    - name: nginx
+      image: nginx:1.21
+      volumeMounts:
+        - name: html
+          mountPath: /usr/share/nginx/html
+  volumes:
+    - name: html
+      configMap:
+        name: blue
+        items:
+          - key: body
+            path: index.html
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: blue
+data:
+  body: <body style="background-color:blue;"></body>
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: blue
+spec:
+  selector:
+    app: blue
+  ports:
+    - port: 80
