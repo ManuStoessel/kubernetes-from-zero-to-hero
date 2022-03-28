@@ -50,4 +50,4 @@ Verify if replicaset is delete including all the associated pods
 kubectl get rs,po
 ```
 
-[Jump to Home](../README.md) | [Previous Training](../04_multi-container-pods/README.md) | [Next Training](../06_deployments/README.md)
+[Jump to Home](../README.md) | [Previous Training](../04_multi-container-pods/README.md) | [Next Training](../06_deployment/README.md)
