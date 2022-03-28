@@ -57,7 +57,7 @@ kubectl rollout restart deployment my-deployment
 ## Cleanup
 
 ```bash
-kubectl delete deployment --all
+kubectl delete deployment my-deployment
 ```
 
 [Jump to Home](../README.md) | [Previous Training](../06_deployments/README.md) | [Next Training](../08_services/README.md)
