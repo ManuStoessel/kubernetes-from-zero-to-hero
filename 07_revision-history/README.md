@@ -60,4 +60,4 @@ kubectl rollout restart deployment my-deployment
 kubectl delete deployment my-deployment
 ```
 
-[Jump to Home](../README.md) | [Previous Training](../06_deployments/README.md) | [Next Training](../08_services/README.md)
+[Jump to Home](../README.md) | [Previous Training](../06_deployments/README.md) | [Next Training](../08_static-persistence/README.md)
