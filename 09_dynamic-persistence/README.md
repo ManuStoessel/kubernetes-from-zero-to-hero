@@ -78,7 +78,7 @@ kubectl get pvc,pv
 ## Cleanup
 
 ```bash
-kubectl delete pv --all
+kubectl delete pv my-pv...
 kubectl delete sc my-storageclass
 ```
 
