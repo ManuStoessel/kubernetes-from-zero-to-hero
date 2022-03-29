@@ -69,7 +69,11 @@ kubectl run -it nslookup --image nicolaka/netshoot --restart=Never --rm -- nsloo
 
 ## Clean up
 ```bash
-kubectl delete svc,sts,pv,pvc --all
+kubectl delete svc my-service
+kubectl delete sts my-sts
+kubectl delete pvc state-my-sts-0
+kubectl delete pvc state-my-sts-1
+kubectl delete pvc state-my-sts-2
 ```
 
 [Jump to Home](../README.md) | [Previous Training](../15_daemonset/README.md) | [Next Training](../17_job/README.md)
