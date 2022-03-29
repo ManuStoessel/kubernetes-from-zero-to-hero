@@ -47,7 +47,8 @@ kubectl scale deployment load-deployment --replicas 5
 ## Cleanup
 
 ```bash
-kubectl delete deployment --all
+kubectl delete deployment my-deployment
+kubectl delete deployment load-deployment
 kubectl delete svc my-service
 kubectl delete hpa my-autoscaler
 ```
