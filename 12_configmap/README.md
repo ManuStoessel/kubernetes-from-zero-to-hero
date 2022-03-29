@@ -33,7 +33,8 @@ bar
 ## Cleanup
 
 ```bash
-kubectl delete po,cm --all
+kubectl delete po my-pod
+kubectl delete cm my-configmap
 ```
 
 [Jump to Home](../README.md) | [Previous Training](../11_service/README.md) | [Next Training](../13_secret/README.md)
