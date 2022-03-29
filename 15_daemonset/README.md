@@ -14,7 +14,7 @@ kubectl create -f daemonset.yaml
 ## Take a look at your Pods and Nodes
 
 ```bash
-kubectl get po,no
+kubectl get po,no -o wide
 ```
 >The number of pods for the daemonset has to match the number of nodes.
 
