@@ -48,12 +48,12 @@ TOKEN=$(cat token)
 
 * List the pods - this is allowed
   ```bash
-  curl -s https://kubernetes/api/v1/namespaces/default/pods/ --header "Authorization: Bearer $TOKEN" --cacert ca.crt 
+  curl -s https://kubernetes.default.svc.cluster.local/api/v1/namespaces/default/pods/ --header "Authorization: Bearer $TOKEN" --cacert ca.crt 
   ```
 
 * List the services - you should get a 403 status code back
   ```bash
-  curl -s https://kubernetes/api/v1/namespaces/default/services/ --header "Authorization: Bearer $TOKEN" --cacert ca.crt 
+  curl -s https://kubernetes.default.svc.cluster.local/api/v1/namespaces/default/services/ --header "Authorization: Bearer $TOKEN" --cacert ca.crt 
   ```
 
 ## Cleanup
